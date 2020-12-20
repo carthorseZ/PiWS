@@ -27,5 +27,5 @@ GPIO.cleanup()
                     
 print("Watering Ends ", datetime.datetime.now())
 for email in config.notificationList:
-  stream = os.popen("echo 'I have finished watering your garden' | msmtp " + sendTo)
+  stream = os.popen("echo 'I have finished watering your garden' | msmtp " + email)
   print("email message :" + stream.read())
